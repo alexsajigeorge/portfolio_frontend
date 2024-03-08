@@ -1,10 +1,6 @@
 import { ContainerScroll } from "@/components/ui/ipad-scroll";
-import { MacbookScroll } from "@/components/ui/macbook-scroll";
-import { SparklesCore } from "@/components/ui/sparkles";
-import { Badge } from "lucide-react";
-import Link from "next/link";
 
-export const users = [
+ const users = [
   {
     name: "Manu Arora",
     designation: "Founder, Algochurn",

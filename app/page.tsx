@@ -1,143 +1,76 @@
-import { ContainerScroll } from "@/components/ui/ipad-scroll";
+"use client";
 
- const users = [
-  {
-    name: "Manu Arora",
-    designation: "Founder, Algochurn",
-    image: "https://picsum.photos/id/10/300/300",
-    badge: "Mentor",
-  },
-  {
-    name: "Sarah Singh",
-    designation: "Founder, Sarah's Kitchen",
-    image: "https://picsum.photos/id/11/300/300",
-    badge: "Mentor",
-  },
-  {
-    name: "John Doe",
-    designation: "Software Engineer, Tech Corp",
-    image: "https://picsum.photos/id/12/300/300",
-    badge: "Mentor",
-  },
-  {
-    name: "Jane Smith",
-    designation: "Product Manager, Innovate Inc",
-    image: "https://picsum.photos/id/13/300/300",
-    badge: "Mentor",
-  },
-  {
-    name: "Robert Johnson",
-    designation: "Data Scientist, DataWorks",
-    image: "https://picsum.photos/id/14/300/300",
-    badge: "Mentor",
-  },
-  {
-    name: "Emily Davis",
-    designation: "UX Designer, DesignHub",
-    image: "https://picsum.photos/id/15/300/300",
-    badge: "Mentor",
-  },
-  {
-    name: "Michael Miller",
-    designation: "CTO, FutureTech",
-    image: "https://picsum.photos/id/16/300/300",
-    badge: "Mentor",
-  },
-  {
-    name: "Sarah Brown",
-    designation: "CEO, StartUp",
-    image: "https://picsum.photos/id/17/300/300",
-  },
-  {
-    name: "James Wilson",
-    designation: "DevOps Engineer, CloudNet",
-    image: "https://picsum.photos/id/18/300/300",
-    badge: "Something",
-  },
-  {
-    name: "Patricia Moore",
-    designation: "Marketing Manager, MarketGrowth",
-    image: "https://picsum.photos/id/19/300/300",
-    badge: "Mentor",
-  },
-  {
-    name: "Richard Taylor",
-    designation: "Frontend Developer, WebSolutions",
-    image: "https://picsum.photos/id/20/300/300",
-  },
-  {
-    name: "Linda Anderson",
-    designation: "Backend Developer, ServerSecure",
-    image: "https://picsum.photos/id/21/300/300",
-  },
-  {
-    name: "William Thomas",
-    designation: "Full Stack Developer, FullStack",
-    image: "https://picsum.photos/id/22/300/300",
-    badge: "Badger",
-  },
-  {
-    name: "Elizabeth Jackson",
-    designation: "Project Manager, ProManage",
-    image: "https://picsum.photos/id/23/300/300",
-    badge: "Mentor",
-  },
-  {
-    name: "David White",
-    designation: "Database Administrator, DataSafe",
-    image: "https://picsum.photos/id/24/300/300",
-    badge: "Advocate",
-  },
-  {
-    name: "Jennifer Harris",
-    designation: "Network Engineer, NetConnect",
-    image: "https://picsum.photos/id/25/300/300",
-  },
-  {
-    name: "Charles Clark",
-    designation: "Security Analyst, SecureIT",
-    image: "https://picsum.photos/id/26/300/300",
-  },
-  {
-    name: "Susan Lewis",
-    designation: "Systems Analyst, SysAnalyse",
-    image: "https://picsum.photos/id/27/300/300",
-  },
-  {
-    name: "Joseph Young",
-    designation: "Mobile Developer, AppDev",
-    image: "https://picsum.photos/id/28/300/300",
-    badge: "Mentor",
-  },
-  {
-    name: "Margaret Hall",
-    designation: "Quality Assurance, BugFree",
-    image: "https://picsum.photos/id/29/300/300",
-    badge: "Developer",
-  },
-];
+import { SparklesCore } from "@/components/ui/sparkles";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function Home() {
-  
+  const router = useRouter();
+  useEffect(() => {
+    const handleKeyPress = (event) => {
+      // Check if the pressed key is 'N' or 'n'
+      if (event.key === "P" || event.key === "p") {
+        // Redirect to the specific page (replace '/desired-page' with your page path)
+        router.push("/contact");
+      }
+    };
+
+    // Add event listener when component mounts
+    document.addEventListener("keydown", handleKeyPress);
+
+    // Remove event listener when component unmounts
+    return () => {
+      document.removeEventListener("keydown", handleKeyPress);
+    };
+  }, [router]);
   return (
     <main className="min-h-screen flex flex-col items-center justify-center">
-      <div className="flex flex-col overflow-hidden">
-        <ContainerScroll
-          users={users}
-          titleComponent={
-            <>
-              <h1 className="text-4xl font-semibold text-black dark:text-white">
-                Discover the next big thing <br />
-                <span className="text-4xl md:text-[8rem] font-bold mt-1 leading-none">
-                  fusionfolio
-                </span>
-              </h1>
-             
-            </>
-          }
-        />
-     
+      <div className="absolute top-10">
+        <button className="bg-slate-800 no-underline  group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6  text-white inline-block">
+          <span className="absolute inset-0 overflow-hidden rounded-full">
+            <span className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+          </span>
+          <div className="relative flex space-x-2 items-center z-10 font-medium rounded-full bg-zinc-950 py-0.5 px-4 ring-1 ring-white/10 ">
+            <span>Press M to toggle theme</span>
+            <img src="/images/icons/right-arrow.svg" alt="" />
+          </div>
+          <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40" />
+        </button>
       </div>
+      <div className="h-screen w-full  flex flex-col items-center justify-center overflow-hidden">
+        <h1 className="md:text-7xl text-5xl lg:text-9xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 relative z-20">
+          fusionfolio
+        </h1>
+        <div className="w-[20rem] sm:w-[40rem] relative animate-fade-in">
+          {/* Gradients */}
+          <div className="absolute sm:inset-x-20 inset-x-10 top-0 bg-gradient-to-r from-emerald-400/0 via-emerald-400/90  to-transparent h-[2px] w-3/4 blur-sm" />
+          <div className="absolute sm:inset-x-20 inset-x-10 top-0 bg-gradient-to-r from-emerald-400/0 via-emerald-400/90  to-transparent h-px w-3/4" />
+          <div className="absolute sm:inset-x-60  inset-x-28 top-0 bg-gradient-to-r from-transparent via-emerald-600/90 to-transparent h-[5px] w-1/4 blur-sm" />
+          <div className="absolute sm:inset-x-60 inset-x-28 top-0 bg-gradient-to-r from-transparent via-emerald-600/90 to-transparent h-px w-1/4" />
+
+          {/* Core component */}
+          {/* <SparklesCore
+            background="transparent"
+            minSize={0.4}
+            maxSize={1}
+            particleDensity={1200}
+            className="w-full h-full"
+            particleColor="#FFFFFF"
+          /> */}
+
+          {/* Radial Gradient to prevent sharp edges */}
+          {/* <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div> */}
+        </div>
+        <div className="mt-5">
+          <p className="text-[13px] max-w-[40rem] text-center font-normal text-neutral-300">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+            nostrum fugit quaerat veniam animi rem culpa sapiente et? Cum,
+            consequatur.
+          </p>
+        </div>
+      </div>
+
+      <div className="h-40">d</div>
     </main>
   );
 }

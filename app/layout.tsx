@@ -4,7 +4,6 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "@/components/theme-provider";
 import { FloatingNav } from "@/components/navbar/floating-navbar";
-import Header from "@/components/header/header";
 
 const myFont = localFont({ src: "./fonts/GeistVariableVF.ttf" });
 
@@ -21,14 +20,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={myFont.className}>
+      <body className={`${myFont.className}  animate-fade-in px-4 lg:px-40`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-        <Header />
           {children}
           <FloatingNav
             navItems={[

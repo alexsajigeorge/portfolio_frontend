@@ -1,20 +1,19 @@
 "use client";
 
 import { SparklesCore } from "@/components/ui/sparkles";
+import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 export default function Home() {
+  const { theme, setTheme } = useTheme();
   const router = useRouter();
-  useEffect(() => {
-    const handleKeyPress = (event) => {
-      // Check if the pressed key is 'N' or 'n'
-      if (event.key === "P" || event.key === "p") {
-        // Redirect to the specific page (replace '/desired-page' with your page path)
-        router.push("/contact");
-      }
-    };
 
+  const handleKeyPress = (event: any) => {
+    // Check if the pressed key is 'N' or 'n'
+    if (event.key === "M" || event.key === "m") {
+      setTheme(theme === "light" ? "dark" : "light");
+    }
     // Add event listener when component mounts
     document.addEventListener("keydown", handleKeyPress);
 
@@ -22,7 +21,8 @@ export default function Home() {
     return () => {
       document.removeEventListener("keydown", handleKeyPress);
     };
-  }, [router]);
+  };
+
   return (
     <main className="min-h-screen flex flex-col items-center justify-center">
       <div className="absolute top-10">

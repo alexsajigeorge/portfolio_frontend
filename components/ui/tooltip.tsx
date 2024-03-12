@@ -66,10 +66,10 @@ export const AnimatedTooltip = ({
                   rotate: rotate,
                   whiteSpace: "nowrap",
                 }}
-                className="absolute -top-20 px-5 -left-10 translate-x-1/2 flex text-xs  flex-col items-center justify-center rounded-md bg-black z-50 shadow-xl  py-2"
+                className="absolute -top-20 px-5 -left-10 translate-x-1/2 flex text-xs  flex-col items-center justify-center rounded-md bg-neutral-900 z-50 shadow-xl  py-2"
               >
-                <div className="absolute inset-x-10 z-30 w-[20%] -bottom-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent h-px " />
-                <div className="absolute left-10 w-[40%] z-30 -bottom-px bg-gradient-to-r from-transparent via-emerald-300 to-transparent h-px " />
+                <div className="absolute inset-x-15 z-30 w-[20%] -bottom-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent h-px " />
+                <div className="absolute left-15 w-[40%] z-30 -bottom-px bg-gradient-to-r from-transparent via-emerald-300 to-transparent h-px " />
                 <div className="font-bold text-white relative z-30 text-base">
                   {item.name}
                 </div>

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/providers/theme-provider";
 import { FloatingNav } from "@/components/navbar/floating-navbar";
 
 const myFont = localFont({ src: "./fonts/GeistVariableVF.ttf" });
@@ -28,14 +28,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
-          <FloatingNav
-            navItems={[
-              { name: "Home", link: "/" },
-              { name: "About", link: "/about" },
-              { name: "Projects", link: "/projects" },
-              { name: "Contact", link: "/contact" },
-            ]}
-          />
+          <FloatingNav />
         </ThemeProvider>
         <Analytics />
       </body>

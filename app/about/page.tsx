@@ -1,12 +1,8 @@
-import { TextGenerateEffect } from "@/components/ui/text-generate";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter";
 import Image from "next/image";
 import React from "react";
 
 const About = ({}: { className?: string }) => {
-  const words = `Tech Enthusiast and 
-  Creative Coder `;
-
   const wordsArray = [
     {
       text: "Build",

@@ -4,6 +4,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { FloatingNav } from "@/components/navbar/floating-navbar";
+import { TracingBeam } from "@/components/ui/tracing-beam";
 
 const myFont = localFont({ src: "./fonts/GeistVariableVF.ttf" });
 
@@ -27,8 +28,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
-          <FloatingNav />
+          <TracingBeam>
+            {children}
+            <FloatingNav />
+          </TracingBeam>
         </ThemeProvider>
         <Analytics />
       </body>

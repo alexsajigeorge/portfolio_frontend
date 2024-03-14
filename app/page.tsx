@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="min-h-screen w-full flex flex-col items-center justify-center gap-5 ">
+    <main className="min-h-screen flex flex-col items-center justify-center gap-5 ">
       <HeroSection />
       <div className="bg-gradient-to-r from-transparent via-neutral-600 to-transparent h-[1px] w-full sm:mb-16"></div>
       <About />

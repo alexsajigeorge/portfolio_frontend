@@ -5,31 +5,31 @@ import React from "react";
 const About = ({}: { className?: string }) => {
   const wordsArray = [
     {
-      text: "Build",
+      text: "Tech",
     },
     {
-      text: "awesome",
+      text: "Enthusiast",
     },
     {
-      text: "apps",
+      text: "&",
     },
     {
-      text: "with",
+      text: "Creative",
     },
     {
-      text: "Aceternity.",
-      className: "text-blue-500 dark:text-blue-500",
+      text: "Coder.",
+      className: "text-emerald-500 dark:text-emerald-500",
     },
   ];
   return (
     <>
       <div>
-        {/* <h1 className="text-5xl font-bold text-center">
+        <h1 className="text-5xl font-bold text-center">
           Journey into Innovation
         </h1>
-        <p className="text-center dark:text-neutral-400 text-neutral-600 text-sm">
+        <p className="text-center pt-2 dark:text-neutral-400 text-neutral-600 text-sm">
           Showcasing Fullstack Wizardry & Design Magic
-        </p> */}
+        </p>
 
         <Image
           src="/images/about/techstack.svg"
@@ -42,9 +42,10 @@ const About = ({}: { className?: string }) => {
         <div className="flex -mt-28 relative justify-between items-center">
           <div className="absolute  sm:-left-[30%]">
             <TypewriterEffectSmooth
-              className="max-w-[500px]"
+              className="pl-[5rem] absolute -top-10"
               words={wordsArray}
             />
+
             <Image
               src="/images/about/keyboard.svg"
               width={1000}
@@ -52,7 +53,7 @@ const About = ({}: { className?: string }) => {
               alt="about"
             />
           </div>
-          <div className="absolute  sm:-right-[10%]">
+          <div className="absolute sm:-right-[10%]">
             <Image
               src="/images/about/codeblock.svg"
               width={400}

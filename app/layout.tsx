@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { FloatingNav } from "@/components/navbar/floating-navbar";
 import { TracingBeam } from "@/components/ui/tracing-beam";
@@ -30,6 +31,7 @@ export default function RootLayout({
         >
           <TracingBeam>
             {children}
+            <SpeedInsights />
             <FloatingNav />
           </TracingBeam>
         </ThemeProvider>

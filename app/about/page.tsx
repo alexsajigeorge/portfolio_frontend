@@ -4,7 +4,7 @@ import TypewriterEffectSmooth from "@/components/ui/typewriter";
 import Image from "next/image";
 import React from "react";
 
-const About = ({}: { className?: string }) => {
+const About = () => {
   const wordsArray = [
     {
       text: "Tech",

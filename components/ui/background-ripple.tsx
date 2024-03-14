@@ -9,10 +9,12 @@ export const BackgroundCellAnimation = () => {
   return (
     <div className="relative h-screen w-full bg-black flex justify-center overflow-hidden">
       <BackgroundCellCore />
-      <Heading
-        title="Projects"
-        subtitle="Exploring the Artistry of Technology: A Showcase of Innovative Solutions and Creative Endeavors"
-      />
+      <div className="mt-32">
+        <Heading
+          title="Projects"
+          subtitle="Exploring the Artistry of Technology: A Showcase of Innovative Solutions and Creative Endeavors"
+        />
+      </div>
     </div>
   );
 };

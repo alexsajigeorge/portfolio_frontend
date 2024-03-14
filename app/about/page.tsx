@@ -1,4 +1,6 @@
-import { TypewriterEffectSmooth } from "@/components/ui/typewriter";
+import Heading from "@/components/ui/heading";
+import TypewriterEffectSmooth from "@/components/ui/typewriter";
+
 import Image from "next/image";
 import React from "react";
 
@@ -24,12 +26,10 @@ const About = ({}: { className?: string }) => {
   return (
     <>
       <div>
-        <h1 className="text-5xl font-bold text-center">
-          Journey into Innovation
-        </h1>
-        <p className="text-center pt-2 dark:text-neutral-400 text-neutral-600 text-sm">
-          Showcasing Fullstack Wizardry & Design Magic
-        </p>
+        <Heading
+          title=" Journey into Innovation"
+          subtitle="  Showcasing Fullstack Wizardry & Design Magic"
+        />
 
         <Image
           src="/images/about/techstack.svg"

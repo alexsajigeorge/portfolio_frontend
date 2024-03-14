@@ -103,6 +103,16 @@ const config = {
           from: { opacity: "1" },
           to: { opacity: "0" },
         },
+        "slide-up": {
+          from: {
+            transform: "translateY(100%)"
+
+          },
+          to: {
+            transform: "translateY(0)"
+
+          }
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -110,6 +120,7 @@ const config = {
         "shimmer": "shimmer 5s linear infinite",
         "fade-in": "fade-in 2s ease-in",
         "fade-out": "fade-out 3s ease-out",
+        "slide-up": "slide-up 1s ease-out",
       },
     },
   },

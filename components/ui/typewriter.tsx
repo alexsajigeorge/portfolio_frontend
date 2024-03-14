@@ -54,7 +54,7 @@ export const TypewriterEffect = ({
                   initial={{}}
                   key={`char-${index}`}
                   className={cn(
-                    `dark:text-white text-black opacity-0 hidden`,
+                    `  opacity-0 hidden  bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-400 pointer-events-none`,
                     word.className
                   )}
                 >
@@ -71,7 +71,7 @@ export const TypewriterEffect = ({
   return (
     <div
       className={cn(
-        "text-base sm:text-xl md:text-3xl lg:text-5xl font-bold text-center",
+        "text-base sm:text-xl md:text-3xl lg:text-5xl font-bold text-center ",
         className
       )}
     >
@@ -97,7 +97,7 @@ export const TypewriterEffect = ({
   );
 };
 
-export const TypewriterEffectSmooth = ({
+const TypewriterEffectSmooth = ({
   words,
   className,
   cursorClassName,
@@ -125,7 +125,10 @@ export const TypewriterEffectSmooth = ({
               {word.text.map((char, index) => (
                 <span
                   key={`char-${index}`}
-                  className={cn(`dark:text-white text-black `, word.className)}
+                  className={cn(
+                    ` text-black  bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-400 pointer-events-none`,
+                    word.className
+                  )}
                 >
                   {char}
                 </span>
@@ -155,7 +158,7 @@ export const TypewriterEffectSmooth = ({
         }}
       >
         <div
-          className="text-xs sm:text-base md:text-xl lg:text:3xl xl:text-3xl font-bold"
+          className="text-xs sm:text-base md:text-xl lg:text-[32px] font-bold  bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-400 pointer-events-none"
           style={{
             whiteSpace: "nowrap",
           }}
@@ -177,10 +180,12 @@ export const TypewriterEffectSmooth = ({
           repeatType: "reverse",
         }}
         className={cn(
-          "block rounded-sm w-[1px]  h-4 sm:h-6 xl:h-9 bg-emerald-500",
+          "block rounded-sm w-[1px]  h-4 sm:h-6 xl:h-8 bg-emerald-500",
           cursorClassName
         )}
       ></motion.span>
     </div>
   );
 };
+
+export default TypewriterEffectSmooth;

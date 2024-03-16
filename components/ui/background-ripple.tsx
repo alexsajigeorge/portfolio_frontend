@@ -7,14 +7,8 @@ import Heading from "./heading";
 
 export const BackgroundCellAnimation = () => {
   return (
-    <div className="relative h-screen w-full bg-black flex justify-center overflow-hidden">
+    <div className="relative h-screen w-full bg-transparent flex justify-center overflow-hidden">
       <BackgroundCellCore />
-      <div className="mt-32">
-        <Heading
-          title="Projects"
-          subtitle="Exploring the Artistry of Technology: A Showcase of Innovative Solutions and Creative Endeavors"
-        />
-      </div>
     </div>
   );
 };
@@ -37,12 +31,12 @@ const BackgroundCellCore = () => {
     <div
       ref={ref}
       onMouseMove={handleMouseMove}
-      className="h-full absolute inset-0"
+      className=" absolute inset-x-0 "
     >
-      <div className="absolute h-[20rem] inset-y-0  overflow-hidden">
-        <div className="absolute h-full w-full pointer-events-none -bottom-2 z-40 bg-black [mask-image:linear-gradient(to_bottom,transparent,black)]"></div>
+      <div className="absolute  h-[28rem] inset-y-0  overflow-hidden">
+        <div className="absolute  h-full w-full pointer-events-none -bottom-2 z-40 bg-black [mask-image:linear-gradient(to_bottom,transparent,black)]"></div>
         <div
-          className="absolute inset-0 z-20 bg-transparent"
+          className="absolute  inset-0 z-20  bg-transparent"
           style={{
             maskImage: `radial-gradient(
             ${size / 4}px circle at center,
@@ -62,9 +56,9 @@ const BackgroundCellCore = () => {
             WebkitMaskRepeat: "no-repeat",
           }}
         >
-          <Pattern cellClassName="border-emerald-500 relative z-[100]" />
+          <Pattern cellClassName="border-emerald-500  relative z-[100]" />
         </div>
-        <Pattern className="opacity-[0.5]" cellClassName="border-neutral-700" />
+        <Pattern className="opacity-[0.3]" cellClassName="border-neutral-700" />
       </div>
     </div>
   );
@@ -109,7 +103,7 @@ const Pattern = ({
               <div
                 key={`matrix-col-${colIdx}`}
                 className={cn(
-                  "bg-transparent border-l border-b border-neutral-600",
+                  "bg-transparent  border-l border-b border-neutral-600",
                   cellClassName
                 )}
                 onClick={() => setClickedCell([rowIdx, colIdx])}

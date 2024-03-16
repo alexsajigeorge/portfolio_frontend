@@ -22,18 +22,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${myFont.className}   animate-fade-in px-4 lg:px-40`}>
+      <body className={`${myFont.className} animate-fade-in `}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
-          <TracingBeam>
-            {children}
-            <SpeedInsights />
-            <FloatingNav />
-          </TracingBeam>
+          <TracingBeam>{children}</TracingBeam>
+          <SpeedInsights />
+          <FloatingNav />
         </ThemeProvider>
         <Analytics />
       </body>

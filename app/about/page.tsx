@@ -1,10 +1,36 @@
+"use client";
+import {
+  FollowPointer,
+  FollowerPointerCard,
+} from "@/components/ui/following-pointer";
 import Heading from "@/components/ui/heading";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-card";
-import TypewriterEffectSmooth from "@/components/ui/typewriter";
+import TypewriterEffectSmooth, {
+  TypewriterEffect,
+} from "@/components/ui/typewriter";
+import { motion, useInView } from "framer-motion";
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
+const TitleComponent = ({
+  title,
+  avatar,
+}: {
+  title: string;
+  avatar: string;
+}) => (
+  <div className="flex space-x-2 items-center">
+    <Image
+      src={avatar}
+      height="20"
+      width="20"
+      alt="thumbnail"
+      className="rounded-full border-2 border-white"
+    />
+    <p>{title}</p>
+  </div>
+);
 const About = () => {
   const wordsArray = [
     {
@@ -70,46 +96,73 @@ const About = () => {
     },
   ];
 
+  const blogContent = {
+    slug: "amazing-tailwindcss-grid-layouts",
+    author: "Manu Arora",
+    date: "28th March, 2023",
+    title: "Amazing Tailwindcss Grid Layout Examples",
+    description:
+      "Grids are cool, but Tailwindcss grids are cooler. In this article, we will learn how to create amazing Grid layouts with Tailwindcs grid and React.",
+    image: "/demo/thumbnail.png",
+    authorAvatar: "/manu.png",
+  };
+  const [isVisible, setIsVisible] = useState(false);
+
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
+  useEffect(() => {
+    if (isInView) {
+      setIsVisible(true);
+    }
+  }, [isInView]);
   return (
     <>
-      <div>
-        <div className="absolute inset-x-0 -bottom-[10rem] sm:-bottom-[20rem]">
+      <div className="">
+        <div className="absolute inset-x-0 top-[42rem] sm:top-[50rem]">
           <InfiniteMovingCards
             items={testimonials}
             direction="right"
             speed="slow"
           />
         </div>
-        {/* <Image
-          src="/images/about/techstack2.svg"
-          alt="about"
-          width={900}
-          height={900}
-          className="mt-10 sm:mt-20 absolute top-[] "
-        /> */}
 
-        {/* <TypewriterEffectSmooth className="" words={wordsArray} />
-        <div className="flex  justify-between items-center">
-          <div className="">
-            <Image
-              src="/images/about/keyboard2.png"
-              className=" "
-              width={800}
-              height={800}
-              alt="about"
-            />
-          </div>
-          <div className="">
-            <Image
-              className=" z-50 "
-              width={100}
-              height={100}
-              src="/images/about/codeblock_mob.svg"
-              alt="about"
-            />
-          </div>
-        </div> */}
+        {/* <TypewriterEffectSmooth className="" words={wordsArray} /> */}
       </div>
+
+      <div ref={ref} className="relative sm:mt-[28rem] mt-40">
+        <div className="relative max-h-[320px] flex items-center justify-center mr-auto ">
+          <div className="w-full h-full ">
+            <img
+              src="/images/about/keyboard2.png"
+              className="w-full h-full"
+              alt=""
+            />
+          </div>
+          <div className="absolute z-10 sm:right-0 ">
+            {isVisible && (
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeInOut",
+                  delay: 0.3,
+                }}
+                exit={{ opacity: 0, x: 100 }}
+              >
+                <img
+                  src="/images/about/codeblock.svg"
+                  className="w-full h-full "
+                  alt=""
+                />
+              </motion.div>
+            )}
+          </div>
+        </div>
+      </div>
+      <Heading title={"rdtfghuji"} subtitle={"tgyhjkl"} />
     </>
   );
 };

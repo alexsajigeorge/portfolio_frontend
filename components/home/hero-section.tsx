@@ -1,7 +1,9 @@
+"use client";
 import React from "react";
 import { InfiniteMovingCards } from "../ui/infinite-moving-card";
 import { BackgroundCellAnimation } from "../ui/background-ripple";
 import { Meteors } from "../ui/meteors";
+import { FollowerPointerCard } from "../ui/following-pointer";
 
 const HeroSection = () => {
   return (
@@ -26,7 +28,6 @@ const HeroSection = () => {
           <h1 className="md:text-7xl text-5xl lg:text-9xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 relative z-20 pointer-events-none">
             fusionfolio
           </h1>
-
           <div className="w-[20rem] sm:w-[40rem] relative animate-fade-in">
             {/* Gradients */}
             <div className="absolute sm:inset-x-20 inset-x-10 top-0 bg-gradient-to-r from-emerald-400/0 via-emerald-400/90  to-transparent h-[2px] w-3/4 blur-sm" />
@@ -34,6 +35,7 @@ const HeroSection = () => {
             <div className="absolute sm:inset-x-60  inset-x-28 top-0 bg-gradient-to-r from-transparent via-emerald-600/90 to-transparent h-[5px] w-1/4 blur-sm" />
             <div className="absolute sm:inset-x-60 inset-x-28 top-0 bg-gradient-to-r from-transparent via-emerald-600/90 to-transparent h-px w-1/4" />
           </div>
+
           <div className="mt-5">
             <p className="text-center  leading-[1.6] text-neutral-400 text-sm sm:text-sm max-w-[20rem] sm:max-w-[38rem] font-normal pointer-events-none">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam

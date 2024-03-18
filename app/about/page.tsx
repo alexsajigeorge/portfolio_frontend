@@ -5,13 +5,14 @@ import {
 } from "@/components/ui/following-pointer";
 import Heading from "@/components/ui/heading";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-card";
+import { LampContainer, LampDemo } from "@/components/ui/lamp";
 import TypewriterEffectSmooth, {
   TypewriterEffect,
 } from "@/components/ui/typewriter";
 import { motion, useInView } from "framer-motion";
 
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 
 const TitleComponent = ({
   title,
@@ -31,23 +32,15 @@ const TitleComponent = ({
     <p>{title}</p>
   </div>
 );
+
 const About = () => {
   const wordsArray = [
-    {
-      text: "Tech",
-    },
-    {
-      text: "Enthusiast",
-    },
-    {
-      text: "&",
-    },
     {
       text: "Creative",
     },
     {
       text: "Coder.",
-      className: "text-emerald-500 dark:text-emerald-500",
+      className: "text-emerald-500 dark:text-emerald-500 ",
     },
   ];
 
@@ -96,83 +89,89 @@ const About = () => {
     },
   ];
 
-  const blogContent = {
-    slug: "amazing-tailwindcss-grid-layouts",
-    author: "Manu Arora",
-    date: "28th March, 2023",
-    title: "Amazing Tailwindcss Grid Layout Examples",
-    description:
-      "Grids are cool, but Tailwindcss grids are cooler. In this article, we will learn how to create amazing Grid layouts with Tailwindcs grid and React.",
-    image: "/demo/thumbnail.png",
-    authorAvatar: "/manu.png",
-  };
-  const [isVisible, setIsVisible] = useState(false);
-
-  const ref = useRef(null);
-  const isInView = useInView(ref);
-
-  useEffect(() => {
-    if (isInView) {
-      setIsVisible(true);
-    }
-  }, [isInView]);
   return (
     <>
-      <div className="">
-        <div className="absolute inset-x-0 top-[42rem] sm:top-[50rem]">
+      <div className="h-full w-full  overflow-hidden">
+        <div className="">
           <InfiniteMovingCards
             items={testimonials}
             direction="right"
             speed="slow"
           />
         </div>
-      </div>
-
-      <div ref={ref} className="relative sm:mt-[28rem] mt-40">
-        <div className="relative flex justify-center mb-2">
-          <TypewriterEffectSmooth className="" words={wordsArray} />
-        </div>
-        <div className="relative max-h-[320px] sm:flex flex-col items-center justify-center mr-auto ">
-          {isVisible && (
-            <motion.div
-              initial={{ opacity: 0, y: 100 }}
-              animate={{ opacity: 1, y: 0 }}
+        <div className="">
+          <div className="flex flex-col justify-center w-full items-center py-[2rem] md:py-[7rem]">
+            <TypewriterEffectSmooth words={wordsArray} />
+            <motion.p
+              initial={{ opacity: 0.5, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
+                delay: 0.3,
                 duration: 0.8,
                 ease: "easeInOut",
-                delay: 1,
               }}
-              exit={{ opacity: 0, y: 100 }}
-              className="w-full h-full "
+              className="text-center leading-[1.6] font-normal pointer-events-none max-w-[20rem] sm:max-w-[38rem] pt-2 text-neutral-400 text-sm sm:text-sm"
             >
-              <img
-                src="/images/about/keyboard2.png"
-                className="w-full h-full"
-                alt=""
-              />
-            </motion.div>
-          )}
-          <div className="sm:absolute z-10 sm:right-0 w-full relative px-2 sm:w-[400px] md:w-[250px] lg:w-[380px] 2xl:w-[550px] ">
-            {isVisible && (
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+              animi aut eveniet quia voluptates placeat adipisci repudiandae
+              velit unde laboriosam!
+            </motion.p>
+          </div>
+
+          <div className=" ">
+            <div className="hidden sm:block ">
               <motion.div
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 1, x: 0 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0.5, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{
-                  duration: 0.5,
+                  delay: 0.7,
+                  duration: 0.8,
                   ease: "easeInOut",
-                  delay: 0.3,
                 }}
-                exit={{ opacity: 0, x: 100 }}
+                className="w-full h-full "
               >
                 <img
-                  src="/images/about/codeblock.svg"
-                  className="w-full h-full "
+                  src="/images/about/keyboardblock.png"
+                  className="w-full h-full"
                   alt=""
                 />
               </motion.div>
-            )}
+            </div>
+            <div className="flex-col justify-center items-center flex gap-2 sm:hidden">
+              <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.8,
+                  ease: "easeInOut",
+                  delay: 0.8,
+                }}
+                className="w-full h-full "
+              >
+                <img
+                  src="/images/about/keyboard2.png"
+                  className="w-full h-full"
+                  alt="keyboard"
+                />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.7,
+                  ease: "easeInOut",
+                  delay: 0.8,
+                }}
+                className="w-full h-full px-2 sm:px-5"
+              >
+                <img
+                  src="/images/about/codeblock.svg"
+                  className="w-full h-full"
+                  alt="codeblock"
+                />
+              </motion.div>
+            </div>
           </div>
         </div>
       </div>

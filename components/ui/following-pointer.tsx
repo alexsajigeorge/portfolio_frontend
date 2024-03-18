@@ -1,5 +1,5 @@
 // Core component that receives mouse positions and renders pointer and content
-"use client";
+
 import React, { useEffect, useState } from "react";
 
 import { motion, AnimatePresence, useMotionValue } from "framer-motion";
@@ -70,6 +70,7 @@ export const FollowPointer = ({
   title?: string | React.ReactNode;
 }) => {
   const colors = [
+    "var(--emerald-500)",
     "var(--sky-500)",
     "var(--neutral-500)",
     "var(--teal-500)",
@@ -131,7 +132,7 @@ export const FollowPointer = ({
           "px-2 py-2 bg-neutral-200 text-white whitespace-nowrap min-w-max text-xs rounded-full"
         }
       >
-        {title || `Guest`}
+        {title || `William Shakespeare`}
       </motion.div>
     </motion.div>
   );

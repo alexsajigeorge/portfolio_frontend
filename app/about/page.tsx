@@ -126,20 +126,34 @@ const About = () => {
             speed="slow"
           />
         </div>
-
-        {/* <TypewriterEffectSmooth className="" words={wordsArray} /> */}
       </div>
 
       <div ref={ref} className="relative sm:mt-[28rem] mt-40">
-        <div className="relative max-h-[320px] flex items-center justify-center mr-auto ">
-          <div className="w-full h-full ">
-            <img
-              src="/images/about/keyboard2.png"
-              className="w-full h-full"
-              alt=""
-            />
-          </div>
-          <div className="absolute z-10 sm:right-0 ">
+        <div className="relative flex justify-center mb-2">
+          <TypewriterEffectSmooth className="" words={wordsArray} />
+        </div>
+        <div className="relative max-h-[320px] sm:flex flex-col items-center justify-center mr-auto ">
+          {isVisible && (
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.8,
+                ease: "easeInOut",
+                delay: 1,
+              }}
+              exit={{ opacity: 0, y: 100 }}
+              className="w-full h-full "
+            >
+              <img
+                src="/images/about/keyboard2.png"
+                className="w-full h-full"
+                alt=""
+              />
+            </motion.div>
+          )}
+          <div className="sm:absolute z-10 sm:right-0 w-full relative px-2 sm:w-[400px] md:w-[250px] lg:w-[380px] 2xl:w-[550px] ">
             {isVisible && (
               <motion.div
                 initial={{ opacity: 0, x: 100 }}
@@ -162,7 +176,6 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Heading title={"rdtfghuji"} subtitle={"tgyhjkl"} />
     </>
   );
 };

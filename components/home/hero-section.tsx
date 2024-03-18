@@ -22,8 +22,8 @@ const HeroSection = () => {
             <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40" />
           </button>
         </div>
-        <div className="h-screen w-full relative flex flex-col items-center justify-center overflow-hidden gap-2">
-          <h1 className="md:text-7xl text-5xl lg:text-9xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 relative z-20">
+        <div className="h-screen w-full relative flex flex-col items-center justify-center overflow-hidden gap-2 pointer-events-none">
+          <h1 className="md:text-7xl text-5xl lg:text-9xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 relative z-20 pointer-events-none">
             fusionfolio
           </h1>
 
@@ -35,7 +35,7 @@ const HeroSection = () => {
             <div className="absolute sm:inset-x-60 inset-x-28 top-0 bg-gradient-to-r from-transparent via-emerald-600/90 to-transparent h-px w-1/4" />
           </div>
           <div className="mt-5">
-            <p className="text-center  leading-[1.6] text-neutral-400 text-sm sm:text-sm max-w-[20rem] sm:max-w-[38rem] font-normal ">
+            <p className="text-center  leading-[1.6] text-neutral-400 text-sm sm:text-sm max-w-[20rem] sm:max-w-[38rem] font-normal pointer-events-none">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
               nostrum fugit quaerat veniam animi rem culpa sapiente et? Cum,
               consequatur.

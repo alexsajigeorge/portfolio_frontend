@@ -99,7 +99,7 @@ const About = () => {
             speed="slow"
           />
         </div>
-        <div className="">
+        <div className=" px-4 lg:px-40">
           <div className="flex flex-col justify-center w-full items-center py-[2rem] md:py-[7rem]">
             <TypewriterEffectSmooth words={wordsArray} />
             <motion.p

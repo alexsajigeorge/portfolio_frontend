@@ -158,7 +158,7 @@ const TypewriterEffectSmooth = ({
         }}
       >
         <div
-          className="md:text-6xl lg:text-7xl text-4xl font-medium text-center  max-w-[20rem] sm:max-w-[38rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-400 pointer-events-none"
+          className="text-2xl md:text-7xl font-bold text-center max-w-[20rem] sm:max-w-[38rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-400 pointer-events-none"
           style={{
             whiteSpace: "nowrap",
           }}

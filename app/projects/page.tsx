@@ -6,13 +6,13 @@ import React from "react";
 const Projects = () => {
   return (
     <>
-      <div className="h-screen w-full py-[4rem] md:py-[7rem] flex flex-col  items-center">
+      <div className="w-full py-[4rem] md:py-[7rem] flex flex-col  items-center">
         <Heading
           title="Projects"
           subtitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur fuga iure repudiandae deserunt! Accusamus, reprehenderit reiciendis perspiciatis architecto enim quia?
 "
         />
-        <div className="pt-16 w-full">
+        <div className="pt-16 w-full z-50">
           <BentoGridProjects />
         </div>
       </div>

@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 
 const Heading = ({ title, subtitle }: { title: string; subtitle: string }) => {
   return (
-    <div className="relative z-50 pointer-events-none select-none">
-      <motion.h1
+    <div className="relative z-20 pointer-events-none select-none">
+      <motion.div
         initial={{ opacity: 0.5, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
@@ -12,7 +12,7 @@ const Heading = ({ title, subtitle }: { title: string; subtitle: string }) => {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="md:text-6xl lg:text-7xl text-4xl font-medium text-center  max-w-[20rem] sm:max-w-[38rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-400 pointer-events-none"
+        className="text-2xl md:text-7xl font-bold text-center max-w-[20rem] sm:max-w-[38rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-400 pointer-events-none"
       >
         {title}
         <div className="max-w-[32rem] overflow-auto flex justify-center mx-auto">
@@ -20,7 +20,7 @@ const Heading = ({ title, subtitle }: { title: string; subtitle: string }) => {
             {subtitle}
           </p>
         </div>
-      </motion.h1>
+      </motion.div>
     </div>
   );
 };

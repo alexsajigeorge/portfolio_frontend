@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/text-reveal";
 import { TextGenerateEffect } from "@/components/ui/text-generate";
 import { DrawerDemo } from "@/components/ui/drawer-example";
+import Contact from "@/components/ui/contact";
 
 const products = [
   {
@@ -117,8 +118,10 @@ export default function Home() {
       <div className="w-full h-full pt-40 ">
         <Parallax products={products} />
       </div>
-      <div className=" px-4 lg:px-40">
-        <Projects />
+
+      <Projects />
+      <div className=" w-full  h-full">
+        <Contact />
       </div>
     </main>
   );

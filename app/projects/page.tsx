@@ -12,7 +12,7 @@ const Projects = () => {
           subtitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur fuga iure repudiandae deserunt! Accusamus, reprehenderit reiciendis perspiciatis architecto enim quia?
 "
         />
-        <div className="pt-16 w-full z-50">
+        <div className="pt-16 w-full z-50 px-4 lg:px-40">
           <BentoGridProjects />
         </div>
       </div>

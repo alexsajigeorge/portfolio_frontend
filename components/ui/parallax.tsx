@@ -105,7 +105,7 @@ export const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
       <h1 className="text-2xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-400 pointer-events-none">
-        The Ultimate <br /> development{" "}
+        Immersed in lines <br /> of
         <motion.span
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -113,13 +113,13 @@ export const Header = () => {
           className="text-emerald-500 "
         >
           {" "}
-          studio{" "}
+          code{" "}
         </motion.span>
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-        We build beautiful products with the latest technologies and frameworks.
-        We are a team of passionate developers and designers that love to build
-        amazing products.
+        I find solace in delving into the intricacies of code, but I'm equally
+        enthusiastic about understanding the complexities of human interactions
+        and societal dynamics.
       </p>
     </div>
   );

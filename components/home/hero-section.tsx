@@ -38,9 +38,8 @@ const HeroSection = () => {
 
           <div className="mt-5">
             <p className="text-center  leading-[1.6] text-neutral-400 text-sm sm:text-sm max-w-[20rem] sm:max-w-[38rem] font-normal pointer-events-none">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-              nostrum fugit quaerat veniam animi rem culpa sapiente et? Cum,
-              consequatur.
+              Developing High-Performance Websites with Stunning Design and
+              Blazing Speed, Infused with Impeccable Design Skills
             </p>
           </div>
         </div>

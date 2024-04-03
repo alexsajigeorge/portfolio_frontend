@@ -120,8 +120,11 @@ export default function Home() {
       </div>
 
       <Projects />
-      <div className=" w-full  h-full">
+      <div className=" w-full h-full">
         <Contact />
+      </div>
+      <div>
+        <img src="/images/newsletter/newsletter.png" alt="" />
       </div>
     </main>
   );

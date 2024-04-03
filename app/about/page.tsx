@@ -47,43 +47,44 @@ const About = () => {
   const testimonials = [
     {
       quote:
-        "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
-      name: "Charles Dickens",
-      title: "A Tale of Two Cities",
+        "Next.js is an open-source web development framework created by the private company Vercel providing React-based web applications with server-side rendering and static website generation.",
+      name: "Next.js",
+      title: "",
       icon: "/images/icons/techstack/nextjs.svg",
     },
     {
-      quote: "All that we see or seem is but a dream within a dream.",
-      name: "Edgar Allan Poe",
-      title: "A Dream Within a Dream",
+      quote:
+        "Vue.js is an open-source model–view–viewmodel front end JavaScript library for building user interfaces and single-page applications. It was created by Evan You, and is maintained by him and the rest of the active core team members.",
+      name: "Vue.js",
+      title: "",
       icon: "/images/icons/techstack/vuejs.svg",
     },
 
     {
       quote:
-        "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-      name: "Jane Austen",
-      title: "Pride and Prejudice",
+        "React is a free and open-source front-end JavaScript library for building user interfaces based on components. It is maintained by Meta and a community of individual developers and companies. React can be used to develop single-page, mobile, or server-rendered applications with frameworks like Next.js. ",
+      name: "React",
+      title: "",
       icon: "/images/icons/techstack/reactjs.svg",
     },
     {
       quote:
-        "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-      name: "Herman Melville",
-      title: "Moby-Dick",
+        "Laravel is a free and open-source PHP web framework, created by Taylor Otwell and intended for the development of web applications following the model–view–controller architectural pattern and based on Symfony.",
+      name: "Laravel",
+      title: "",
       icon: "/images/icons/techstack/laravel.svg",
     },
     {
       quote:
-        "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-      name: "Herman Melville",
+        "TypeScript is a free and open-source high-level programming language developed by Microsoft that adds static typing with optional type annotations to JavaScript. It is designed for the development of large applications and transpiles to JavaScript. ",
+      name: "TypeScript",
       title: "Moby-Dick",
       icon: "/images/icons/techstack/typescript.svg",
     },
     {
       quote:
-        "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-      name: "Herman Melville",
+        "JavaScript, often abbreviated as JS, is a programming language and core technology of the Web, alongside HTML and CSS. 99% of websites use JavaScript on the client side for webpage behavior. Web browsers have a dedicated JavaScript engine that executes the client code. ",
+      name: "JavaScript",
       title: "Moby-Dick",
       icon: "/images/icons/techstack/javascript.svg",
     },
@@ -112,9 +113,8 @@ const About = () => {
               }}
               className="text-center leading-[1.6] font-normal pointer-events-none max-w-[20rem] sm:max-w-[38rem] pt-2 text-neutral-400 text-sm sm:text-sm"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-              animi aut eveniet quia voluptates placeat adipisci repudiandae
-              velit unde laboriosam!
+              Crafting High-Performance Websites with Stunning Design & Speed:
+              Elevating User Experiences One Pixel at a Time
             </motion.p>
           </div>
 

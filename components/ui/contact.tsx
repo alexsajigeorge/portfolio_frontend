@@ -64,53 +64,16 @@ const LabelInputContainer = ({
 
 const Contact = () => {
   return (
-    <div className="px-4 lg:px-40  w-full z-10">
-      <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start sm:h-[32rem]  relative ">
-        <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
-        <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
-        <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
-        <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
+    // <div className="px-4 lg:px-40  w-full z-10">
+    //   <Heading
+    //     title="Let's Talk"
+    //     className="text-left w-full"
+    //     subtitle="Send in a message or book a call with us. We're always happy to help."
+    //   />
 
-        <div className="flex flex-col sm:flex-row w-full h-full justify-between ">
-          <div className="flex flex-col justify-between items-start p-5 w-full sm:w-[60%]">
-            <Heading
-              title="Let's Talk"
-              className="text-left w-full"
-              subtitle="Send in a message or book a call with us. We're always happy to help."
-            />
+    // </div>
 
-            <form className="w-full mt-5 sm:mt-0">
-              <div className="flex flex-col  md:flex-row space-y-2 md:space-y-0 md:space-x-2 my-4">
-                <LabelInputContainer className="w-full z-50">
-                  <Label htmlFor="firstname">Full name</Label>
-                  <Input id="firstname" placeholder="Tyler" type="text" />
-                </LabelInputContainer>
-              </div>
-              <div className="flex flex-col  md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
-                <LabelInputContainer className=" w-full z-50">
-                  <Label htmlFor="email">Email Address</Label>
-                  <Input
-                    id="email"
-                    placeholder="projectmayhem@fc.com"
-                    className=""
-                    type="email"
-                  />
-                </LabelInputContainer>
-              </div>
-              <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
-              <button
-                className="bg-gradient-to-br  z-20 font-normal relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10  shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
-                type="submit"
-              >
-                Shoot &rarr;
-                <BottomGradient />
-              </button>
-            </form>
-          </div>
-          <ParallaxScroll className="hidden sm:block" images={images} />
-        </div>
-      </div>
-    </div>
+    <div className="my-[-64px] min-w-[1200px] bg-[#4e5cda] transform rotate-180 relative mx-auto h-[600px] overflow-hidden pointer-events-none select-none [mask-image:radial-gradient(circle, black, transparent 80%)]"></div>
   );
 };
 

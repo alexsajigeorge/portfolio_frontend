@@ -123,9 +123,6 @@ export default function Home() {
       <div className=" w-full h-full">
         <Contact />
       </div>
-      <div>
-        <img src="/images/newsletter/newsletter.png" alt="" />
-      </div>
     </main>
   );
 }
